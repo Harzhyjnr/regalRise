@@ -7,7 +7,7 @@
       <p class="lead">Let’s transform your visibility into profitability.</p>
       <router-link
         class="route-btn bg-white text-dark px-4 py-2 rounded fw-semibold"
-        @click="$router.push('#')"
+        to="#"
       >
         Join Our Talent Roster
       </router-link>
@@ -41,7 +41,6 @@ p {
   text-decoration: none;
   font-size: 0.8rem;
   padding: 10px 20px;
-
   border-radius: 10px;
   font-family: "Montserrat" sans-serif;
 }

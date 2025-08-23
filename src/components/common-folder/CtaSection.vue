@@ -3,7 +3,7 @@
   <section class="text-center py-5 bg-primary text-white w-100">
     <h2 class="fw-bold">Ready to Boost Your Hospitality Brand?</h2>
     <p class="lead">Let’s transform your visibility into profitability.</p>
-    <router-link class="route-btn bg-white text-dark px-4 py-2 rounded" @click="$router.push('#')">
+    <router-link class="route-btn bg-white text-dark px-4 py-2 rounded" to="#">
       Let’s work together
     </router-link>
   </section>
@@ -36,7 +36,6 @@ p {
   text-decoration: none;
   font-size: 0.8rem;
   padding: 10px 20px;
-
   border-radius: 10px;
   font-family: "Montserrat" sans-serif;
 }
