@@ -8,7 +8,7 @@
       :bold2="content.bold2"
       :showBtn="false"
     />
-    <BrandStory/>
+  <BrandStory/>
 <FounderNote/>
 
 
@@ -28,7 +28,7 @@ import HeroContent from '../components/common-folder/HeroContent.vue';
 import BrandStory from '../components/section-folder/BrandStory.vue';
 import FounderNote from '../components/section-folder/FounderNote.vue';
 import MeetTeamCard from '../components/common-folder/MeetTeamCard.vue';
-import CEO from '../assets/image/ceo.jpg'
+import CEO from '../assets/image/ceo.jpg';
 
 
 
