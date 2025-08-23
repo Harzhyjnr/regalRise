@@ -14,7 +14,7 @@
         </div>
         <div class="col-md-6 text-center">
           <img
-            src="....."
+            src=""
             alt="RegalRise Story"
             class="img-fluid rounded shadow-sm"
           />

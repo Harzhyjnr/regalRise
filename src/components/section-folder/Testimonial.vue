@@ -12,8 +12,9 @@
         >
           <div class="testimonial-card p-4 h-100 shadow-sm rounded">
             <div class="d-flex align-items-center mb-3">
+               <!-- :src="" -->
               <img
-                :src="t.img"
+               
                 class="rounded-circle me-3"
                 width="50"
                 height="50"

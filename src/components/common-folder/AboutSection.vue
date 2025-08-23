@@ -76,7 +76,7 @@
           <div class="col-12 col-md-4">
             <div class="card shadow-sm">
               <img
-                src="..."
+                src=""
                 class="card-img-top"
                 alt="Restaurant before/after"
               />
@@ -90,7 +90,7 @@
           </div>
           <div class="col-12 col-md-4">
             <div class="card shadow-sm">
-              <img src="..." class="card-img-top" alt="Shortlet before/after" />
+              <img src="" class="card-img-top" alt="Shortlet before/after" />
               <div class="card-body">
                 <h6 class="fw-bold">Shortlets</h6>
                 <p class="text-muted small">
@@ -101,7 +101,7 @@
           </div>
           <div class="col-12 col-md-4">
             <div class="card shadow-sm">
-              <img src="..." class="card-img-top" alt="Hotel before/after" />
+              <img src="" class="card-img-top" alt="Hotel before/after" />
               <div class="card-body">
                 <h6 class="fw-bold">Hotels</h6>
                 <p class="text-muted small">
