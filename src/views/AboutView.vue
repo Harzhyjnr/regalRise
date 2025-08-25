@@ -13,7 +13,7 @@
 
 
 <div class="course-cards container my-5">
-      <div class="row g-4">
+      <div class="row g-4 justify-content-center">
         <!-- Card 1 -->
         <div class="col-12 col-md-6 col-lg-4" v-for="member in members" :key="member.id">
  <MeetTeamCard :meet="member"/>

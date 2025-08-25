@@ -7,7 +7,7 @@
       <p class="lead">Let’s transform your visibility into profitability.</p>
       <router-link
         class="route-btn bg-white text-dark px-4 py-2 rounded fw-semibold"
-        to="#"
+        to="/join"
       >
         Join Our Talent Roster
       </router-link>

@@ -8,7 +8,7 @@
       :des="content.des"
       :btn1="content.routeName"
        :showBtn="true"
-  buttonLink="#"
+  buttonLink="/join"
     />
 
     <div data-aos="fade-up" data-aos-duration="2000"  data-aos-once="true">

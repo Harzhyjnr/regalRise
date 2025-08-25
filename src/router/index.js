@@ -6,7 +6,9 @@ import ContactView from '../views/ContactView.vue'
 import Blog from '../views/Blog.vue'    
 import Creators from '../views/Creators.vue'
 import Hospitality from '../views/Hospitality.vue'
-
+import JoinOurTalentRoaster from '../components/common-folder/JoinOurTalentRoaster.vue'
+import BookingConsultation from '../components/section-folder/BookingConsultation.vue'
+import WorkWithUs from '../components/section-folder/WorkWithUs.vue'
 
 
 
@@ -20,6 +22,9 @@ const router = createRouter({
     {path: '/about', name: 'about', component: AboutView},
     {path: '/blog', name: 'blog', component: Blog},
     {path: '/contact', name: 'contact', component:ContactView },
+    {path: '/join', name: 'join', component:JoinOurTalentRoaster },
+    {path: '/booking', name:'booking', component:BookingConsultation},
+    {path: '/workWithUs', name:'workWithUs', component: WorkWithUs}
 
   ],
 })

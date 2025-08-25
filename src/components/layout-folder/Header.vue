@@ -10,7 +10,7 @@
         <!-- Mobile Work with us (always visible before X) -->
          
         <router-link
-          to="#"
+          to="/workWithUs"
           class="btn d-lg-none ms-auto me-2"
         >
           Work with us
@@ -57,7 +57,7 @@
         </div>
 
         <!-- Desktop Work with us (far right) -->
-        <router-link to="#" class="btn work-btn d-none d-lg-flex">
+        <router-link to="/workWithUs" class="btn work-btn d-none d-lg-flex">
   Work with us
 </router-link>
         

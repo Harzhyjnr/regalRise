@@ -6,11 +6,11 @@
     <p class="card-text">Creators, let us manage your brand. Businesses, let us scale your visibility.</p>
     <div class="d-flex justify-content-center gap-2">
       <router-link 
-        class="route-btn" to="#">
+        class="route-btn" to="/join">
         Join Our Talent Pool
     </router-link>
     <router-link
-        to="#" class="route-btn">
+        to="/booking" class="route-btn">
         Book a Consultation
 </router-link>
     </div>
