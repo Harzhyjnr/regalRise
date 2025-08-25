@@ -2,7 +2,7 @@
   <section class="contact-page container mt-5 py-5">
     <div class="text-center mb-5">
       <h2 class="fw-bold">Get in Touch</h2>
-      <p class="text-muted contact-title ">
+      <p class="text-muted contact-title">
         Whether you're a Creator or a Business, we’d love to hear from you.
       </p>
     </div>
@@ -17,36 +17,12 @@
             Join our talent pool and grow your brand visibility.
           </p>
           <form @submit.prevent="submitCreator">
-            <input
-              type="text"
-              class="form-control mb-3"
-              placeholder="Your Name"
-              v-model="creatorForm.name"
-            />
-            <input
-              type="email"
-              class="form-control mb-3"
-              placeholder="Your Email"
-              v-model="creatorForm.email"
-            />
-            <input
-              type="text"
-              class="form-control mb-3"
-              placeholder="Your Social Media Handle (e.g. @username)"
-              v-model="creatorForm.handle"
-            />
+            <input type="text" class="form-control mb-3" placeholder="Your Name" v-model="creatorForm.name" required />
+            <input type="email" class="form-control mb-3" placeholder="Your Email" v-model="creatorForm.email" required />
+            <input type="text" class="form-control mb-3" placeholder="Your Social Media Handle (e.g. @username)" v-model="creatorForm.handle" required />
+            <textarea class="form-control mb-3" rows="3" placeholder="Tell us about your niche" v-model="creatorForm.niche" required></textarea>
 
-            <textarea
-              class="form-control mb-3"
-              rows="3"
-              placeholder="Tell us about your niche"
-              v-model="creatorForm.niche"
-            ></textarea>
-            <button
-              type="submit"
-              class="btn btn-primary w-100"
-              :disabled="creatorLoading"
-            >
+            <button type="submit" class="btn btn-primary w-100" :disabled="creatorLoading">
               {{ creatorLoading ? "Sending..." : "Join Talent Pool" }}
             </button>
             <p class="mt-2 text-success">{{ creatorStatus }}</p>
@@ -62,29 +38,10 @@
             Book a free consultation to boost your brand.
           </p>
           <form @submit.prevent="submitBusiness">
-            <input
-              type="text"
-              class="form-control mb-3"
-              placeholder="Business Name"
-              v-model="businessForm.name"
-            />
-            <input
-              type="email"
-              class="form-control mb-3"
-              placeholder="Business Email"
-              v-model="businessForm.email"
-            />
-            <textarea
-              class="form-control mb-3"
-              rows="3"
-              placeholder="Your Needs / Goals"
-              v-model="businessForm.goals"
-            ></textarea>
-            <button
-              type="submit"
-              class="btn btn-primary w-100"
-              :disabled="businessLoading"
-            >
+            <input type="text" class="form-control mb-3" placeholder="Business Name" v-model="businessForm.name" required />
+            <input type="email" class="form-control mb-3" placeholder="Business Email" v-model="businessForm.email" required />
+            <textarea class="form-control mb-3" rows="3" placeholder="Your Needs / Goals" v-model="businessForm.goals" required></textarea>
+            <button type="submit" class="btn btn-primary w-100" :disabled="businessLoading">
               {{ businessLoading ? "Sending..." : "Book Consultation" }}
             </button>
             <p class="mt-2 text-success">{{ businessStatus }}</p>
@@ -96,7 +53,7 @@
     <!-- Contact Info -->
     <div class="text-center mt-5">
       <p class="mb-2 h6">
-        📧 Email: <a href="mailto:regalrise2024@gmai.com">regalrise2024@gmail.com</a>
+        📧 Email: <a href="mailto:regalrise2024@gmail.com">regalrise2024@gmail.com</a>
       </p>
       <div class="social-links">
         <a href="https://www.instagram.com/regalrisehq/profilecard/?igsh=MWNnN2p5YnhucDN2eQ==" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
@@ -112,23 +69,11 @@
 import { reactive, ref } from "vue";
 import axios from "axios";
 
-// Creator form
-const creatorForm = reactive({
-  name: "",
-  email: "",
-  handle: "",
-  niche: "",
-});
-
-const businessForm = reactive({
-  name: "",
-  email: "",
-  goals: "",
-});
+const creatorForm = reactive({ name: "", email: "", handle: "", niche: "" });
+const businessForm = reactive({ name: "", email: "", goals: "" });
 
 const creatorStatus = ref("");
 const creatorLoading = ref(false);
-
 const businessStatus = ref("");
 const businessLoading = ref(false);
 
@@ -136,18 +81,11 @@ const submitCreator = async () => {
   creatorLoading.value = true;
   creatorStatus.value = "";
   try {
-    const res = await axios.post(
-      "https://regalrise-backend.onrender.com/api/creator",
-      creatorForm
-    );
-
+    const res = axios.post("https://regalrise-backend.onrender.com/api/creator", creatorForm);
     creatorStatus.value = "✅ " + res.data.msg;
-
-    creatorForm.name = "";
-    creatorForm.email = "";
-    creatorForm.handle = "";
-    creatorForm.niche = "";
+    Object.keys(creatorForm).forEach(key => creatorForm[key] = "");
   } catch (err) {
+    console.error(err);
     creatorStatus.value = "❌ Failed to send Creator form.";
   } finally {
     creatorLoading.value = false;
@@ -163,11 +101,9 @@ const submitBusiness = async () => {
       businessForm
     );
     businessStatus.value = "✅ " + res.data.msg;
-    // clear form
-    businessForm.name = "";
-    businessForm.email = "";
-    businessForm.goals = "";
+    Object.keys(businessForm).forEach(key => businessForm[key] = "");
   } catch (err) {
+    console.error(err);
     businessStatus.value = "❌ Failed to send Business form.";
   } finally {
     businessLoading.value = false;
@@ -181,8 +117,8 @@ const submitBusiness = async () => {
   font-family: "Montserrat", sans-serif;
 }
 
-.contact-title{
-  font-size: .8rem;
+.contact-title {
+  font-size: 0.8rem;
 }
 .social-links a {
   color: #000;
@@ -192,19 +128,6 @@ const submitBusiness = async () => {
   color: #0d6efd;
 }
 
-.h6{
-  font-size: .8rem;
-}
-
-input{
-  font-size: .8rem;
-}
-
-.btn{
-  font-size: .8rem;
-}
-
-textarea{
-  font-size: .8rem;
-}
+.h6 { font-size: 0.8rem; }
+input, textarea, .btn { font-size: 0.8rem; }
 </style>
