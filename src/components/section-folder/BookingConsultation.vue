@@ -70,7 +70,7 @@ const submitConsultation = async () => {
   loading.value = true
   status.value = ""
   try {
-    const res = await axios.post("http://localhost:2345/api/book-consultation", consultForm)
+    const res = await axios.post("https://regalrise-backend.onrender.com/api/book-consultation", consultForm)
     status.value = "✅ " + res.data.msg
 
     // Reset form

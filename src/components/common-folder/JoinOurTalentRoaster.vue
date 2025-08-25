@@ -61,7 +61,7 @@ const submitCreator = async () => {
   JoinStatus.value = "";
   try {
     const res = await axios.post(
-      "http://localhost:2345/api/join",
+      "https://regalrise-backend.onrender.com/api/join",
       JoinForm
     );
 

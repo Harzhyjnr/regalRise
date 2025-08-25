@@ -69,7 +69,7 @@ const submitWorkForm = async () => {
   loading.value = true
   status.value = ""
   try {
-    const res = await axios.post("http://localhost:2345/api/work-with-us", workForm)
+    const res = await axios.post("https://regalrise-backend.onrender.com/api/work-with-us", workForm)
     status.value = "✅ " + res.data.msg
 
     // Reset form

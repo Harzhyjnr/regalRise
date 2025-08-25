@@ -137,7 +137,7 @@ const submitCreator = async () => {
   creatorStatus.value = "";
   try {
     const res = await axios.post(
-      "http://localhost:2345/api/creator",
+      "https://regalrise-backend.onrender.com/api/creator",
       creatorForm
     );
 
@@ -159,7 +159,7 @@ const submitBusiness = async () => {
   businessStatus.value = "";
   try {
     const res = await axios.post(
-      "http://localhost:2345/api/business",
+      "https://regalrise-backend.onrender.com/api/business",
       businessForm
     );
     businessStatus.value = "✅ " + res.data.msg;
