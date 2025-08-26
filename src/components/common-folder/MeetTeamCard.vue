@@ -1,13 +1,19 @@
 <template>
-  <div class="card  h-100 text-center border-radius-none  !important" data-aos="fade-up" data-aos-duration="2000"  data-aos-once="true">
-    <img :src="meet.img" class="card-img-top" alt="" />
-    <div class="card-body">
-      <h5 class="card-title">{{ meet.name }}</h5>
-      <p class="card-text text-muted">
-        {{meet.role }}
-      </p>
-    </div>
+<div 
+  class="card h-100 text-center team-card"
+  data-aos="fade-up"
+  data-aos-duration="2000"
+  data-aos-once="true"
+>
+  <img :src="meet.img" class="card-img-top" alt="" />
+  <div class="card-body">
+    <h4 class="card-title">{{ meet.name }}</h4>
+    <p class="card-text text-muted">
+      {{ meet.role }}
+    </p>
   </div>
+</div>
+
 </template>
 
 <script setup>
@@ -22,8 +28,23 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
-img{
-    width: 100px;
+.team-card {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important; // optional (removes shadow if Bootstrap adds it)
+}
+
+.team-card img {
+  border-radius: 0 !important;
+}
+
+
+h4{
+  font-weight: 600;
+}
+
+p{
+  font-size: 1rem;
 }
 
 .card {

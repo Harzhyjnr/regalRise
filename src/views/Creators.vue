@@ -1,8 +1,8 @@
 <template>
-  <section class="creator-container d-flex flex-column align-items-center mt-5">
+  <section class="creator-container  mt-5">
     <HeroContent
      
-      class="mb-5 d-flex vh-80 vh-lg-80 text center py-5"
+      class="mb-5 d-flex vh-80 vh-lg-80 text center py-5 flex-column align-items-center"
       :heading="content.title"
       :subHeading="content.subTitle"
       :des="content.des"
@@ -23,26 +23,29 @@
     </div>
 
     <h2 class="text-center mt-5" data-aos="fade-up" data-aos-duration="2000"  data-aos-once="true"> Our Service</h2>
-    <div class="service-card container mt-2 ">
-<div class="row g-4 justify-content-center">
-    <div class="col col-12 col-lg-3 col-md-6" v-for="service in services" :key="service.id">
-      <ServiceCardSection  :service="service" />
+   <div class="service-card container mt-2">
+  <div class="row g-4 justify-content-center">
+    <div class="col-12 col-lg-3 col-md-6 d-flex" v-for="service in services" :key="service.id">
+      <ServiceCardSection :service="service" class="w-100 h-100"/>
     </div>
-    </div>
+  </div>
 </div>
 
+
 <Testimonial class="mt-5"/>
+
+ <CtaSection2/>
   </section>
-  <CtaSection2/>
+
 </template>
 
 <script setup>
 import HeroContent from "../components/common-folder/HeroContent.vue";
 import PainPointSection from "../components/common-folder/PainPointSection.vue";
 import Overthinking from "../../src/assets/image/overthinker.svg";
-import Struggling from "../../src/assets/image/struggling.svg"
-import NoBrand from "../../src/assets/image/nobrand.svg"
-import BurnOut from "../../src/assets/image/burnout.svg"
+import Struggling from "../../src/assets/image/struggling.svg";
+import NoBrand from "../../src/assets/image/nobrand.svg";
+import BurnOut from "../../src/assets/image/burnout.svg";
 import ServiceCardSection from "../components/common-folder/ServiceCardSection.vue";
 import Testimonial from "../components/section-folder/Testimonial.vue";
 import CtaSection2 from "../components/common-folder/CtaSection2.vue";
