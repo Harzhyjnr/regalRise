@@ -39,7 +39,7 @@ import CEO from '../assets/image/ceo.jpg';
 import CoFounder from '../assets/image/co-founder.jpg';
 import Legal from '../assets/image/legal.jpg';
 import Talent from '../assets/image/talentManager.jpg';
-import Resident from '../assets/image/residentintern.jpg';
+import Resident from '../assets/image/Residentintern.jpg';
 import Creative from '../assets/image/creative.jpg';
 import Content from '../assets/image/content.jpg';
 import Benayoun from '../assets/image/benayoun.jpg'
