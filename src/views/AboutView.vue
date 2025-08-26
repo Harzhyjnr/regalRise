@@ -42,7 +42,7 @@ import Talent from '../assets/image/talentManager.jpg';
 import Creative from '../assets/image/creative.jpg';
 import Content from '../assets/image/content.jpg';
 import Benayoun from '../assets/image/benayoun.jpg'
-import lateefah from '../assets/image/resident-intern.jpg'
+import lateefah from '../assets/image/resident-image.jpg'
 const content = {
   title: "About RegalRise",
   des: "Bridging the gap between ",
