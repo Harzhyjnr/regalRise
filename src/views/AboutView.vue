@@ -39,11 +39,10 @@ import CEO from '../assets/image/ceo.jpg';
 import CoFounder from '../assets/image/co-founder.jpg';
 import Legal from '../assets/image/legal.jpg';
 import Talent from '../assets/image/talentManager.jpg';
-import Resident from '../assets/image/Residentintern.jpg';
 import Creative from '../assets/image/creative.jpg';
 import Content from '../assets/image/content.jpg';
 import Benayoun from '../assets/image/benayoun.jpg'
-
+import lateefah from '../assets/image/resident-intern.jpg'
 const content = {
   title: "About RegalRise",
   des: "Bridging the gap between ",
@@ -59,7 +58,7 @@ const members =[
   { id:5, img:Creative, name:"Agbofia Roger Goodnews", role:"Creative director" },
   { id:6, img:Content, name:"Fatima Abdulrahman ", role:"Content Strategist" },
   { id:7, img:Benayoun, name:"Yusuf Abdulmojeed", role:"----" },
-  { id:8, img:Resident, name:"Yusuf Lateefah", role:"Resident Intern" },
+  { id:8, img:lateefah, name:"Yusuf Lateefah", role:"Resident Intern" },
 ]
 </script>
 
